@@ -1,0 +1,41 @@
+.footer {
+    width: 100%;
+    background-color: var(--dark-blue);
+    color: var(--white);
+    text-align: center;
+    padding: 15px 0;
+    font-size: 14px;
+    position: relative;
+    bottom: 0;
+    left: 0;
+    height: 6vh;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.footer-content p {
+    margin: 0;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.github-link {
+    color: var(--white);
+    font-size: 16px;
+    transition: color 0.3s;
+}
+
+.github-link:hover {
+    color: var(--light-teal);
+}
+
+.github-link i {
+    font-size: 18px;
+}
