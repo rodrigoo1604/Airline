@@ -6,30 +6,17 @@
     @if($flights->isEmpty())
         <p>No flights available at the moment.</p>
     @else
-        <table class="flights-table">
-            <thead>
-                <tr>
-                    <th>Date</th>
-                    <th>Departure</th>
-                    <th>Arrival</th>
-                    <th>Seats</th>
-                    <th>Action</th>
-                </tr>
-            </thead>
-            <tbody>
-                @foreach($flights as $flight)
-                    <tr>
-                        <td>{{ $flight->date }}</td>
-                        <td>{{ $flight->departure }}</td>
-                        <td>{{ $flight->arrival }}</td>
-                        <td>{{ $flight->plane->seats }}</td>
-                        <td>
-                            <a href="#" class="btn">Book Now</a>
-                        </td>
-                    </tr>
-                @endforeach
-            </tbody>
-        </table>
+        <div class="flights-list">
+            @foreach($flights as $flight)
+                <div class="flight-item">
+                    <div class="flight-info">
+                        <span class="flight-destination">{{ $flight->departure }} ✈ {{ $flight->arrival }}</span>
+                        <span class="flight-date">{{ \Carbon\Carbon::parse($flight->date)->format('d M Y') }}</span>
+                    </div>
+                    <p><strong>Seats Available:</strong> {{ $flight->plane->seats }}</p>
+                </div>
+            @endforeach
+        </div>
     @endif
 </div>
 @endsection

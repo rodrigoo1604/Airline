@@ -13,7 +13,7 @@ header {
     font-weight: bold;
 }
 
-nav a {
+nav .btn {
     text-decoration: none;
     color: var(--white);
     margin-left: 15px;
@@ -23,6 +23,11 @@ nav a {
     transition: 0.3s;
 }
 
-nav a:hover {
+nav .btn:hover {
     background-color: var(--light-blue);
+}
+
+.logo a {
+    text-decoration: none;
+    color: inherit;
 }
